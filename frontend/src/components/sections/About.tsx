@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { GraduationCap, Code, Zap, Shield } from 'lucide-react'
 import { useCountUp } from '@/hooks/useCountUp'
@@ -137,15 +138,15 @@ export function About() {
 
           <div className="space-y-8">
             <div className="reveal reveal-delay-2 relative">
-              <div className="aspect-square rounded-2xl overflow-hidden border-[1.5px] border-[var(--border)] bg-white">
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--violet-pale)] to-[var(--coral-pale)]">
-                  <div
-                    className="w-32 h-32 rounded-2xl flex items-center justify-center text-white text-4xl font-display font-extrabold"
-                    style={{ background: 'linear-gradient(135deg, var(--violet), var(--coral))', fontFamily: 'var(--font-display)' }}
-                  >
-                    EVN
-                  </div>
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden border-[1.5px] border-[var(--border)] bg-white relative">
+                <Image
+                  src="/myimg.png"
+                  alt="Eslavath Vineeth Naik"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
+                />
               </div>
             </div>
 
