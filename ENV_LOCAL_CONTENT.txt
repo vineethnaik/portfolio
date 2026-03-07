@@ -1,0 +1,10 @@
+# MongoDB Configuration
+MONGODB_URI=mongodb+srv://vineethnaikeslavath_db_user:6zyHdxwLCapyGGcZ@cluster0.ozr2ldt.mongodb.net/portfolio?appName=Cluster0
+
+# Email Configuration (Gmail) - UPDATE WITH YOUR ACTUAL EMAIL
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+
+# Admin Dashboard Credentials - CHANGE FOR SECURITY
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=your-secure-password
