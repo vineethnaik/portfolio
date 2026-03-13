@@ -63,6 +63,8 @@ export function Navbar() {
           <motion.a
             href="#home"
             onClick={() => handleNavClick('#home')}
+            data-cursor="link"
+            data-label="Home"
             className="font-display font-extrabold text-lg uppercase tracking-[0.08em] text-[var(--ink)]"
             style={{ fontFamily: 'var(--font-display)' }}
             whileHover={{ scale: 1.02 }}
@@ -78,6 +80,8 @@ export function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
+                  data-cursor="link"
+                  data-label={item.name}
                   onClick={(e) => {
                     e.preventDefault()
                     handleNavClick(item.href)
@@ -96,6 +100,8 @@ export function Navbar() {
 
             <motion.a
               href="#contact"
+              data-cursor="link"
+              data-label="Hire Me"
               onClick={(e) => {
                 e.preventDefault()
                 handleNavClick('#contact')
@@ -153,15 +159,17 @@ export function Navbar() {
               </div>
               <nav className="space-y-6">
                 {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      handleNavClick(item.href)
-                    }}
-                    className="block text-lg font-medium text-[var(--muted)] hover:text-[var(--ink)] transition-colors"
-                  >
+                <a
+                  key={item.name}
+                  href={item.href}
+                  data-cursor="link"
+                  data-label={item.name}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleNavClick(item.href)
+                  }}
+                  className="block text-lg font-medium text-[var(--muted)] hover:text-[var(--ink)] transition-colors"
+                >
                     {item.name}
                   </a>
                 ))}
@@ -169,6 +177,8 @@ export function Navbar() {
               <div className="absolute bottom-6 left-6 right-6">
                 <motion.a
                   href="#contact"
+                  data-cursor="link"
+                  data-label="Hire Me"
                   onClick={(e) => {
                     e.preventDefault()
                     handleNavClick('#contact')

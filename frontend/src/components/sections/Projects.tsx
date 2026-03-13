@@ -168,6 +168,8 @@ export function Projects() {
                               href={featuredProject.links.live}
                               target="_blank"
                               rel="noopener noreferrer"
+                              data-cursor="link"
+                              data-label="Live Demo"
                               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--violet)] text-white rounded-[var(--radius-pill)] font-semibold text-sm shadow-[var(--shadow-violet)] hover:opacity-90 transition-opacity"
                               whileHover={{ scale: 1.02 }}
                               whileTap={{ scale: 0.98 }}
@@ -181,6 +183,8 @@ export function Projects() {
                               href={featuredProject.links.github}
                               target="_blank"
                               rel="noopener noreferrer"
+                              data-cursor="link"
+                              data-label="GitHub"
                               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-pill)] font-semibold text-sm text-ink bg-white border border-border hover:bg-bg-off transition-colors"
                               whileHover={{ scale: 1.02 }}
                               whileTap={{ scale: 0.98 }}
@@ -192,6 +196,8 @@ export function Projects() {
                           <motion.button
                             suppressHydrationWarning
                             onClick={() => setSelectedProject(featuredProject)}
+                            data-cursor="project"
+                            data-label="Case Study"
                             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-pill)] font-semibold text-sm text-ink bg-white border border-border hover:bg-bg-off transition-colors"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
@@ -303,6 +309,8 @@ export function Projects() {
                               href={project.links.live}
                               target="_blank"
                               rel="noopener noreferrer"
+                              data-cursor="link"
+                              data-label="Live Demo"
                               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--violet)] text-white rounded-[var(--radius-pill)] font-semibold text-sm shadow-[var(--shadow-violet)] hover:opacity-90 transition-opacity"
                               whileHover={{ scale: 1.02 }}
                               whileTap={{ scale: 0.98 }}
@@ -316,6 +324,8 @@ export function Projects() {
                               href={project.links.github}
                               target="_blank"
                               rel="noopener noreferrer"
+                              data-cursor="link"
+                              data-label="GitHub"
                               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-pill)] font-semibold text-sm text-ink bg-white border border-border hover:bg-bg-off transition-colors"
                               whileHover={{ scale: 1.02 }}
                               whileTap={{ scale: 0.98 }}
@@ -327,6 +337,8 @@ export function Projects() {
                           <motion.button
                             suppressHydrationWarning
                             onClick={() => setSelectedProject(project)}
+                            data-cursor="project"
+                            data-label="Case Study"
                             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-pill)] font-semibold text-sm text-ink bg-white border border-border hover:bg-bg-off transition-colors"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}

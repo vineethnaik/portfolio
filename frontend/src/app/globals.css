@@ -70,9 +70,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom cursor - hide default on desktop */
+/* Gooey metaball cursor - hide default on desktop */
 @media (hover: hover) and (pointer: fine) {
-  body { cursor: none; }
+  html, body { cursor: none; }
 }
 
 /* Scrollbar */
@@ -97,28 +97,63 @@ body {
   }
 }
 
-/* ── Custom Cursor ── */
-.cursor-dot {
-  position: fixed; top: 0; left: 0; z-index: 9999;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--violet);
+/* ── Gooey Metaball Cursor ── */
+.cursor-metaball-overlay {
+  position: fixed; inset: 0; z-index: 9999;
   pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.cursor-svg-filter { position: absolute; width: 0; height: 0; }
+
+.cursor-blobs {
+  position: absolute; inset: 0;
+  pointer-events: none;
+}
+
+.cursor-main,
+.cursor-sat {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: background 0.35s ease;
+}
+
+.cursor-main {
+  width: 28px; height: 28px;
   transform: translate(-50%, -50%);
 }
 
-.cursor-ring {
-  position: fixed; top: 0; left: 0; z-index: 9998;
-  width: 32px; height: 32px; border-radius: 50%;
-  border: 2px solid var(--violet);
-  pointer-events: none;
-  opacity: 0.4;
+.cursor-sat {
   transform: translate(-50%, -50%);
-  transition: transform 0.18s var(--ease-spring), border-color 0.2s, opacity 0.2s;
+}
+
+.cursor-particles {
+  position: fixed; inset: 0;
+  pointer-events: none;
+}
+
+.cursor-label {
+  position: fixed;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-family: var(--font-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 @media (hover: none) or (pointer: coarse) {
-  .cursor-dot, .cursor-ring { display: none !important; }
-  body { cursor: auto; }
+  .cursor-metaball-overlay,
+  .cursor-label { display: none !important; }
+  html, body { cursor: auto; }
 }
 
 /* ── Scroll Reveal ── */

@@ -169,6 +169,8 @@ export function Contact() {
                   type="submit"
                   disabled={isSubmitting}
                   suppressHydrationWarning
+                  data-cursor="link"
+                  data-label="Send"
                   className="w-full px-7 py-[13px] rounded-[var(--radius-pill)] font-semibold text-[15px] text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   style={{
                     background: 'var(--violet)',
@@ -303,6 +305,8 @@ export function Contact() {
                   href="https://github.com/vineethnaik"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cursor="link"
+                  data-label="GitHub"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="p-3 bg-white border border-border rounded-lg hover:border-violet/50 hover:bg-violet-pale/50 transition-all text-ink"
@@ -313,6 +317,8 @@ export function Contact() {
                   href="https://linkedin.com/in/eslavath-vineeth-naik-a8ab16285"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cursor="link"
+                  data-label="LinkedIn"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   className="p-3 bg-white border border-border rounded-lg hover:border-violet/50 hover:bg-violet-pale/50 transition-all text-ink"
@@ -347,6 +353,8 @@ export function Contact() {
               <motion.a
                 href="/resume.pdf"
                 download
+                data-cursor="link"
+                data-label="Download"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-violet text-white rounded-[var(--radius-pill)] font-semibold text-sm shadow-violet hover:bg-violet-2 transition-all"

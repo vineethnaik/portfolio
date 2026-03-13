@@ -66,7 +66,7 @@ export function Hero() {
             </p>
 
             <div className="hero-actions-anim flex flex-wrap items-center gap-4">
-              <Link href="#projects">
+              <Link href="#projects" data-cursor="project" data-label="View Projects">
                 <motion.div
                   className="inline-flex items-center gap-2 px-7 py-[13px] rounded-[var(--radius-pill)] font-semibold text-[15px] text-white"
                   style={{
@@ -83,7 +83,7 @@ export function Hero() {
               </Link>
 
               <div className="inline-flex items-center gap-1.5">
-                <a href="/Eslavath_Vineeth_Naik_Resume.pdf" download="Eslavath_Vineeth_Naik_Resume.pdf">
+                <a href="/Eslavath_Vineeth_Naik_Resume.pdf" download="Eslavath_Vineeth_Naik_Resume.pdf" data-cursor="link" data-label="Download Resume">
                   <motion.div
                     className="inline-flex items-center gap-2 px-7 py-[13px] rounded-[var(--radius-pill)] font-semibold text-[15px] text-[var(--ink)] border-[1.5px] border-[var(--border)] bg-transparent"
                     style={{
@@ -103,6 +103,8 @@ export function Hero() {
                 <motion.button
                   type="button"
                   onClick={() => setResumeOpen(true)}
+                  data-cursor="project"
+                  data-label="View Resume"
                   className="btn-rainbow inline-flex items-center justify-center transition-shadow"
                   style={{ transition: 'transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1)' }}
                   whileHover={{ y: -3 }}
@@ -117,6 +119,8 @@ export function Hero() {
                 href="https://github.com/vineethnaik"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cursor="link"
+                data-label="GitHub"
                 className="w-[50px] h-[50px] rounded-[var(--radius-pill)] border-[1.5px] border-[var(--border)] bg-white flex items-center justify-center text-[var(--ink)]"
                 style={{ transition: 'border-color 0.2s, background 0.2s, transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1)' }}
                 whileHover={{
