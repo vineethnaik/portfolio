@@ -12,7 +12,7 @@ import { Testimonials } from '@/components/sections/Testimonials'
 import { Contact } from '@/components/sections/Contact'
 import { Footer } from '@/components/layout/Footer'
 
-export default function Home() {
+export default function FullPage() {
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--ink)]">
       <PageLoader />

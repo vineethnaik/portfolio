@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useScrollDirection } from '@/hooks/useScrollDirection'
@@ -76,6 +77,12 @@ export function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <div className="flex items-center gap-8">
+              <Link href="/" data-cursor="link" data-label="Home" className={cn(
+                'text-sm font-medium transition-colors duration-200',
+                'text-[var(--muted)] hover:text-[var(--ink)]'
+              )}>
+                Home
+              </Link>
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -158,6 +165,9 @@ export function Navbar() {
                 </button>
               </div>
               <nav className="space-y-6">
+                <Link href="/" className="block text-lg font-medium text-[var(--muted)] hover:text-[var(--ink)] transition-colors">
+                  Home
+                </Link>
                 {navItems.map((item) => (
                 <a
                   key={item.name}
